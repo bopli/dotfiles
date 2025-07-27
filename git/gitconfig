@@ -37,4 +37,5 @@
 {{#if (is_executable "difft")}}
 [diff]
     external = "difft"
+
 {{/if}}
