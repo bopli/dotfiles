@@ -1,0 +1,40 @@
+{{#if (and email git_username)}}
+[user]
+    email = {{email}}
+    name = {{git_username}}
+
+[credential]
+    helper = store
+
+{{/if}}
+[core]
+    {{#if (eq dotter.os "windows")}}
+    symlinks = true
+    autocrlf = true
+    {{else}}
+    autocrlf = input
+    {{/if}}
+    {{#if (is_executable "hx")}}
+    editor = hx
+    {{/if}}
+
+[help]
+    autocorrect = 20
+
+[alias]
+    changes = "log -M -L"
+    lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+[init]
+    defaultBranch = main
+
+[push]
+    autoSetupRemote = true
+
+[pull]
+    rebase = true
+
+{{#if (is_executable "difft")}}
+[diff]
+    external = "difft"
+{{/if}}

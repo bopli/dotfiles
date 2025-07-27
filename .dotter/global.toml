@@ -9,3 +9,6 @@ depends = []
 
 [settings]
 default_target_type = "automatic"
+
+[git.files]
+"common/git/gitconfig" = "~/.gitconfig"
