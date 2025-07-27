@@ -3,8 +3,8 @@
 [settings]
 default_target_type = "automatic"
 
-[cargo.fies]
-"common/cargo/config.toml" = "~/.cargo/config/config.toml"
+[cargo.files]
+"cargo/config.toml" = "~/.cargo/config/config.toml"
 
 [git.files]
-"common/git/gitconfig" = "~/.gitconfig"
+"git/gitconfig" = "~/.gitconfig"
