@@ -1,0 +1,24 @@
+theme = "onedark"
+
+[editor]
+bufferline = "multiple"
+true-color = true
+rulers = [120]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.insert]
+# j = { k = "normal_mode" }
+"C-/" = "toggle_comments"
+
+[keys.normal]
+g = { a = "code_action" }
+C-s = ":write"
+"C-/" = "toggle_comments"
+";" = "command_mode"
+
+[keys.select]
+"C-/" = "toggle_comments"

@@ -1,0 +1,6 @@
+# C/C++
+build/
+
+# Rust
+target/
+Cargo.lock
