@@ -3,6 +3,10 @@
 [settings]
 default_target_type = "automatic"
 
+[bash.files]
+"bash/bashrc" = "~/.bashrc"
+"bash/bash_profile" = "~/.bash_profile"
+
 [cargo.files]
 "cargo/config.toml" = "~/.cargo/config/config.toml"
 

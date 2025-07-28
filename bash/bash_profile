@@ -1,0 +1,25 @@
+# Environment variables
+export HISTFILESIZE=9000
+export HISTSIZE=500
+export PROMPT_COMMAND='history -a'
+export HISTCONTROL=ignoredups:ignorespace
+export HISTIGNORE="ls:cd:pwd:exit:clear:history:df:du:git status:git diff:git log"
+export HISTTIMEFORMAT="%F %T "
+# export HISTFILE="$HOME/.config/bash/bash_history"
+
+{{#if (is_executable "go")}}
+# Go proxy
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn
+{{/if}}
+
+{{#if (is_executable "rustup")}}
+# Rustup proxy
+export RUSTUP_DIST_SERVER=https://rsproxy.cn
+export RUSTUP_UPDATE_ROOT=https://rsproxy.cn/rustup
+{{/if}}
+
+# Load .bashrc
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi

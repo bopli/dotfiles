@@ -1,0 +1,43 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+{{#if (eq dotter.os "windows")}}
+# Shopt
+shopt -s completion_strip_exe
+{{/if}}
+
+# Alias
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+alias df="df -Th"
+alias du="du -sh"
+alias less="less -r"
+alias grep="grep --color=auto"
+{{#if (is_executable "eza")}}
+alias ls="eza --color=auto"
+alias l="ls -F"
+alias ll="l -ahl --time-style long-iso"
+{{else}}
+alias ls="ls --color=auto"
+alias l="ls -F"
+alias ll="l -Ahl"
+{{/if}}
+alias la="ls -a"
+
+{{#if (is_executable "starship")}}
+# Prompt with starship
+eval "$(starship init bash)"
+{{/if}}
+
+{{#if (is_executable "fzf")}}
+# Fuzzy Finder
+eval "$(fzf --bash)"
+{{/if}}
+
+{{#if (eq dotter.os "windows")}}
+# Completions for Cargo
+if command -v rustc >/dev/null 2>&1; then
+  source "$(rustc --print sysroot)"/etc/bash_completion.d/cargo
+fi
+{{/if}}
