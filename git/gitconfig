@@ -1,7 +1,7 @@
-{{#if (and email git_username)}}
+{{#if (and git_email git_name)}}
 [user]
-    email = {{email}}
-    name = {{git_username}}
+    email = {{git_email}}
+    name = {{git_name}}
 
 [credential]
     helper = store

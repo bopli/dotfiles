@@ -11,6 +11,7 @@ default_target_type = "automatic"
 "cargo/config.toml" = "~/.cargo/config/config.toml"
 
 [git.files]
+# local variables: git_name, git_email
 "git/gitconfig" = "~/.gitconfig"
 
 [starship.files]
