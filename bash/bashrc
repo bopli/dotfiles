@@ -14,6 +14,9 @@ alias df="df -Th"
 alias du="du -sh"
 alias less="less -r"
 alias grep="grep --color=auto"
+{{#if (is_executable "bat")}}
+alias cat="bat"
+{{/if}}
 {{#if (is_executable "eza")}}
 alias ls="eza --color=auto"
 alias l="ls -F"
