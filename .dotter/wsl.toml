@@ -1,2 +1,5 @@
+[bat.files]
+bat = "~/.config/bat"
+
 [helix.files]
 helix = "~/.config/helix"

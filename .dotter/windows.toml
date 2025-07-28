@@ -1,2 +1,5 @@
+[bat.files]
+bat = "~/AppData/Roaming/bat"
+
 [helix.files]
 helix = "~/AppData/Roaming/helix"
