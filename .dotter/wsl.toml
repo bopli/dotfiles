@@ -3,3 +3,8 @@ bat = "~/.config/bat"
 
 [helix.files]
 helix = "~/.config/helix"
+
+[wsl.files."wsl/wsl.conf"]
+target = "/etc/wsl.conf"
+type = "template"
+owner = "root"
