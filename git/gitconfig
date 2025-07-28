@@ -14,7 +14,7 @@
     {{else}}
     autocrlf = input
     {{/if}}
-    {{#if (is_executable "hx")}}
+    {{#if dotter.packages.helix}}
     editor = hx
     {{/if}}
 
