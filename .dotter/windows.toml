@@ -6,3 +6,7 @@ helix = "~/AppData/Roaming/helix"
 
 [pwsh.files]
 "pwsh/profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
+
+[sublime.files]
+# local variables: sublime_font_size
+sublime = "~/AppData/Roaming/Sublime Text/Packages/User"

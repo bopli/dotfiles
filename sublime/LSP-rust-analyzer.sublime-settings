@@ -1,0 +1,6 @@
+{
+	"settings": {
+		"rust-analyzer.inlayHints.maxLength": 10,
+	},
+	"enabled": false,
+}

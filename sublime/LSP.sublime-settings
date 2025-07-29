@@ -1,0 +1,6 @@
+{
+	"lsp_format_on_save": true,
+	"show_inlay_hints": true,
+	"inlay_hints_max_length": 20,
+	"inhibit_snippet_completions": true,
+}
