@@ -21,7 +21,7 @@ alias cat="bat"
 alias ls="eza --color=auto"
 alias l="eza -F --color=auto"
 alias la="eza -a --color=auto"
-alias ll="eza -aFhl --color=auto --time-style long-iso"
+alias ll="eza -ahl --color=auto --time-style long-iso"
 {{else}}
 alias ls="ls --color=auto"
 alias l="ls -F --color=auto"
