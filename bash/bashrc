@@ -19,14 +19,15 @@ alias cat="bat"
 {{/if}}
 {{#if (is_executable "eza")}}
 alias ls="eza --color=auto"
-alias l="ls -F"
-alias ll="l -ahl --time-style long-iso"
+alias l="eza -F --color=auto"
+alias la="eza -a --color=auto"
+alias ll="eza -aFhl --color=auto --time-style long-iso"
 {{else}}
 alias ls="ls --color=auto"
-alias l="ls -F"
-alias ll="l -Ahl"
+alias l="ls -F --color=auto"
+alias la="ls -a --color=auto"
+alias ll="ls -AFhl --color=auto"
 {{/if}}
-alias la="ls -a"
 
 {{#if dotter.packages.starship}}
 # Prompt with starship
