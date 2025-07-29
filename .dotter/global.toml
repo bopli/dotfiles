@@ -8,11 +8,11 @@ default_target_type = "automatic"
 "bash/bash_profile" = "~/.bash_profile"
 
 [cargo.files]
-"cargo/config.toml" = "~/.cargo/config/config.toml"
+cargo = "~/.cargo"
 
 [git.files]
 # local variables: git_name, git_email
 "git/gitconfig" = "~/.gitconfig"
 
 [starship.files]
-"starship/starship.toml" = "~/.config/starship.toml"
+starship = "~/.config"
