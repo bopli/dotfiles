@@ -2,7 +2,7 @@
 # Go proxy
 $env:GO111MODULE = "on"
 $env:GOPROXY = "https://goproxy.cn"
-$env:GOPATH = {{env_gopath}}
+$env:GOPATH = "~/.go"
 $env:PATH += ";$env:GOPATH\bin"
 {{/if}}
 
@@ -20,7 +20,7 @@ $env:VCPKG_TARGET_TRIPLET = {{vcpkg_target}}
 $env:VCPKG_DEFAULT_TRIPLET = {{vcpkg_target}}
 $env:VCPKG_DEFAULT_HOST_TRIPLET = {{vcpkg_target}}
 {{/if}}
-$env:VCPKG_ROOT = {{vcpkg_root}}
+$env:VCPKG_ROOT = "C:\vcpkg"
 $env:PATH += ";$env:VCPKG_ROOT"
 {{#if (is_executable "cmake")}}
 $env:CMAKE_TOOLCHAIN_FILE = "$env:VCPKG_ROOT\scripts\buildsystems\vcpkg.cmake"
