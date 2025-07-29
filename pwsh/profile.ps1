@@ -2,7 +2,7 @@
 # Go proxy
 $env:GO111MODULE = "on"
 $env:GOPROXY = "https://goproxy.cn"
-$env:GOPATH = "~/.go"
+$env:GOPATH = "$env:USERPROFILE\.go"
 $env:PATH += ";$env:GOPATH\bin"
 {{/if}}
 
