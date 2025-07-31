@@ -9,7 +9,6 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
-$custom\
 $cmd_duration\
 $line_break\
 $python\
@@ -28,7 +27,7 @@ format = "[$branch]($style)"
 style = "bright-black"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style) "
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
 style = "cyan"
 conflicted = "​"
 untracked = "​"
@@ -39,26 +38,8 @@ deleted = "​"
 stashed = "≡"
 
 [git_state]
-format = '\([$state($progress_current/$progress_total)]($style)\) '
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
 style = "bright-black"
-
-# [custom.git_commits]
-# command = "count=$(git rev-list --count @{upstream}..HEAD 2>/dev/null); [ \"$count\" -gt 0 ] && echo \"↑$count+\" || echo \"\""
-# when = "git rev-parse --is-inside-work-tree 2>/dev/null"
-# shell = "bash"
-# format = "[$output](bold green)"
-
-[custom.git_commits]
-command = "count=$(git rev-list --count @{upstream}..HEAD 2>/dev/null); [ \"$count\" -gt 0 ] && echo -e \"↑$count​\" || echo \"\""
-when = "git rev-parse --is-inside-work-tree 2>/dev/null"
-shell = "bash"
-format = "[$output](bold green)"
-
-[custom.git_fetch]
-command = "count=$(git rev-list --count HEAD..@{upstream} 2>/dev/null); [ \"$count\" -gt 0 ] && echo \"↓$count​\" || echo \"\""
-when = "git rev-parse --is-inside-work-tree 2>/dev/null"
-shell = "bash"
-format = "[$output](bold blue)"
 
 [cmd_duration]
 format = "[$duration]($style) "
@@ -67,6 +48,3 @@ style = "yellow"
 [python]
 format = "[$virtualenv]($style) "
 style = "bright-black"
-
-[package]
-disabled = true
