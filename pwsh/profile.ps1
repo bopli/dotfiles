@@ -86,3 +86,7 @@ Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 # PsFzf
 Set-PsFzfOption -PSReadlineChordProvider ctrl+t -PSReadlineChordReverseHistory ctrl+r
 {{/if}}
+
+{{#if (is_executable "starship")}}
+Invoke-Expression (&starship init powershell)
+{{/if}}
