@@ -16,3 +16,6 @@ cargo = "~/.cargo"
 
 [starship.files]
 starship = "~/.config"
+
+[uv.files]
+uv = "~/.config"
