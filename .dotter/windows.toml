@@ -10,4 +10,4 @@ helix = "~/AppData/Roaming/helix"
 
 [sublime.files]
 # local variables: sublime_font_size
-sublime = "~/AppData/Roaming/Sublime Text/Packages/User"
+sublime = { target = "~/AppData/Roaming/Sublime Text/Packages/User", type = "template" }
