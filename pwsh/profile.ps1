@@ -1,3 +1,7 @@
+{{#if dotter.packages.bat}}
+$env:PAGER = "bat"
+{{/if}}
+
 {{#if (is_executable "go")}}
 # Go proxy
 $env:GO111MODULE = "on"
