@@ -44,8 +44,8 @@ if (Test-Path $env:ANDROID_HOME) {
 $env:PATH += ";$env:USERPROFILE\.local\bin"
 
 function proxy {
-    $env:HTTP_PROXY = "127.0.0.1:10808"
-    $env:HTTPS_PROXY = "127.0.0.1:10808"
+    $env:HTTP_PROXY = "http://127.0.0.1:10808"
+    $env:HTTPS_PROXY = "http://127.0.0.1:10808"
 }
 
 function unproxy {
