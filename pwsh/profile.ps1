@@ -1,3 +1,7 @@
+{{#if gemini_api_key}}
+$env:GEMINI_API_KEY = {{gemini_api_key}} 
+{{/if}}
+
 {{#if dotter.packages.bat}}
 $env:PAGER = "bat"
 {{/if}}
