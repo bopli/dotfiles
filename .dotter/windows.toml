@@ -4,9 +4,6 @@ bat = "~/AppData/Roaming/bat"
 [helix.files]
 helix = "~/AppData/Roaming/helix"
 
-[nvim.files]
-nvim = "~/AppData/Local/nvim"
-
 [pwsh.files]
 # local variables: vcpkg_target
 "pwsh/profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
