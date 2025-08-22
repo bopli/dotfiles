@@ -17,6 +17,7 @@ set showcmd                            " 显示部分命令
 set showmatch                          " 显示匹配的括号
 set showmode                           " 显示当前模式（如--INSERT--）
 set scrolloff=6                        " 光标与屏幕最小间距
+set mouse=a                            " 添加鼠标支持
 setlocal noswapfile                    " 对当前文件禁用交换文件
 
 set clipboard=unnamedplus              " 将系统剪贴板与Vim的寄存器共享
