@@ -16,6 +16,7 @@ set ruler                              " 显示当前光标位置（行号和列
 set showcmd                            " 显示部分命令
 set showmatch                          " 显示匹配的括号
 set showmode                           " 显示当前模式（如--INSERT--）
+set scrolloff=6                        " 光标与屏幕最小间距
 setlocal noswapfile                    " 对当前文件禁用交换文件
 
 set clipboard=unnamedplus              " 将系统剪贴板与Vim的寄存器共享
