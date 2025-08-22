@@ -1,0 +1,65 @@
+// Zed settings
+{
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Macchiato"
+  },
+  "base_keymap": "VSCode",
+  "buffer_font_family": "Cascadia Code",
+  "buffer_font_size": 13,
+  "buffer_line_height": "standard",
+  "ui_font_family": ".SystemUIFont",
+  "ui_font_size": 15,
+  "restore_on_startup": "none",
+  "use_system_path_prompts": false,
+  "use_system_prompts": false,
+  "auto_signature_help": true,
+  "title_bar": {
+    "show_branch_icon": true
+  },
+  "gutter": {
+    "min_line_number_digits": 2
+  },
+  "seed_search_query_from_cursor": "selection",
+  "inlay_hints": {
+    "enabled": true
+  },
+  "project_panel": {
+    "indent_size": 14
+  },
+  "outline_panel": {
+    "indent_size": 15
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.0-flash-lite"
+    },
+    "always_allow_tool_actions": true,
+    "stream_edits": true
+  },
+  "tabs": {
+    "git_status": true
+  },
+  "extend_comment_on_newline": false,
+  "terminal": {
+    "cursor_shape": "underline",
+    "line_height": "standard",
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "font_size": 12
+  },
+  "vim": {
+    "cursor_shape": {
+      "normal": "hollow",
+      "insert": "bar",
+      "visual": "block"
+    }
+  },
+  "proxy": "http://127.0.0.1:10808"
+}

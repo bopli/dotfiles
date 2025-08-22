@@ -11,3 +11,6 @@ helix = "~/AppData/Roaming/helix"
 [sublime.files]
 # local variables: sublime_font_size
 sublime = { target = "~/AppData/Roaming/Sublime Text/Packages/User", type = "template" }
+
+[zed.files]
+zed = "~/AppData/Roaming/Zed"
