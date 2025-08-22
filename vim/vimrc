@@ -26,8 +26,9 @@ set completeopt=menuone,noinsert,noselect " 设置补全选项：菜单显示一
 set complete=.,w,b,u,t,i                " 设置补全的来源：当前文件，缓冲区，未加载的文件，标签，内置函数，智能补全
 set hidden                             " 允许在没有保存的情况下切换缓冲区
 
-nnoremap ; :                           " 映射：将分号(;)映射为冒号(:)，方便输入命令
-nnoremap bn :bnext                     " 映射：跳转到下一个缓冲区
-nnoremap bp :bprevious                 " 映射：跳转到上一个缓冲区
-nnoremap bd :bdelete                   " 映射：删除当前缓冲区
-cnoremap <C-V> <C-R>"                  " 映射：在插入模式下，Ctrl+V粘贴无回车的内容
+" 映射
+nnoremap ; :
+nnoremap bn :bnext
+nnoremap bp :bprevious
+nnoremap bd :bdelete
+cnoremap <C-V> <C-R>"
