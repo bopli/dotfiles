@@ -19,3 +19,6 @@ starship = "~/.config"
 
 [uv.files]
 uv = "~/.config"
+
+[vim.files]
+"vim/vimrc" = "~/.vimrc"

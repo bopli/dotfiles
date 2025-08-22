@@ -1,0 +1,32 @@
+syntax on                              " 启用语法高亮
+set number                             " 显示行号
+set nocompatible                       " 禁用Vi兼容模式，启用Vim的特性
+set nowrap                             " 禁用自动换行
+set laststatus=2                       " 设置底部状态栏的显示模式（2表示始终显示）
+set tabstop=4                          " 设置Tab键的宽度为4个空格
+set shiftwidth=4                       " 设置自动缩进的宽度为4个空格
+set autoindent                         " 启用自动缩进
+set smartindent                        " 启用智能缩进
+set history=100                        " 设置命令历史记录的行数
+set hlsearch                           " 启用搜索高亮
+set incsearch                          " 启用增量搜索（输入时即时显示匹配项）
+set ignorecase                         " 忽略搜索时的大小写
+set smartcase                          " 当搜索词包含大写字母时，启用大小写敏感搜索
+set ruler                              " 显示当前光标位置（行号和列号）
+set showcmd                            " 显示部分命令
+set showmatch                          " 显示匹配的括号
+set showmode                           " 显示当前模式（如--INSERT--）
+setlocal noswapfile                    " 对当前文件禁用交换文件
+
+set clipboard=unnamedplus              " 将系统剪贴板与Vim的寄存器共享
+set timeout                            " 设置按键超时时间（用于映射）
+set wildmenu                           " 启用命令行补全菜单
+set completeopt=menuone,noinsert,noselect " 设置补全选项：菜单显示一个选项时立即插入，不插入，不选择
+set complete=.,w,b,u,t,i                " 设置补全的来源：当前文件，缓冲区，未加载的文件，标签，内置函数，智能补全
+set hidden                             " 允许在没有保存的情况下切换缓冲区
+
+nnoremap ; :                           " 映射：将分号(;)映射为冒号(:)，方便输入命令
+nnoremap bn :bnext                     " 映射：跳转到下一个缓冲区
+nnoremap bp :bprevious                 " 映射：跳转到上一个缓冲区
+nnoremap bd :bdelete                   " 映射：删除当前缓冲区
+cnoremap <C-V> <C-R>"                  " 映射：在插入模式下，Ctrl+V粘贴无回车的内容
