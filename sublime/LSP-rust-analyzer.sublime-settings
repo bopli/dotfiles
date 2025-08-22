@@ -2,5 +2,8 @@
 	"settings": {
 		"rust-analyzer.inlayHints.maxLength": 10,
 	},
+	"command": [
+		"~/.cargo/bin/rust-analyzer"
+	],
 	"enabled": false,
 }
