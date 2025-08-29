@@ -2,7 +2,7 @@
 {
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Macchiato"
   },
   "base_keymap": "VSCode",
@@ -11,10 +11,9 @@
   "buffer_line_height": "standard",
   "ui_font_family": ".SystemUIFont",
   "ui_font_size": 15,
-  "restore_on_startup": "none",
   "use_system_path_prompts": false,
   "use_system_prompts": false,
-  "auto_signature_help": true,
+  // "auto_signature_help": true,
   "title_bar": {
     "show_branch_icon": true
   },
@@ -35,6 +34,7 @@
     "button": false
   },
   "agent": {
+    "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "google",
       "model": "gemini-2.0-flash-lite"
