@@ -1,5 +1,5 @@
 {{#if gemini_api_key}}
-$env:GEMINI_API_KEY = {{gemini_api_key}} 
+$env:GEMINI_API_KEY = {{gemini_api_key}}
 {{/if}}
 
 {{#if dotter.packages.bat}}
@@ -11,7 +11,7 @@ $env:PAGER = "bat"
 $env:GO111MODULE = "on"
 $env:GOPROXY = "https://goproxy.cn"
 $env:GOPATH = "$env:USERPROFILE\.go"
-$env:PATH += ";$env:GOPATH\bin"
+$env:PATH += "$env:GOPATH\bin;"
 {{/if}}
 
 {{#if (is_executable "rustup")}}
@@ -45,7 +45,8 @@ if (Test-Path $env:ANDROID_HOME) {
 }
 
 # PATH modifications
-$env:PATH += ";$env:USERPROFILE\.local\bin"
+$env:PATH += "$env:USERPROFILE\.local\bin;"
+$env:PATH += "$env:USERPROFILE\.local\opt\pgsql\bin;"
 
 function proxy {
     $env:HTTP_PROXY = "http://127.0.0.1:10808"
