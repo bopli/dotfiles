@@ -20,6 +20,9 @@ $env:RUSTUP_DIST_SERVER = "https://rsproxy.cn"
 $env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 {{/if}}
 
+$env:PGDATA = "$env:USERPROFILE\.local\opt\pgsql\data"
+$env:PATH += "$env:USERPROFILE\.local\opt\pgsql\bin;"
+
 {{#if (is_executable "vcpkg")}}
 # Vcpkg and Cmake
 {{#if vcpkg_target}}
@@ -46,7 +49,6 @@ if (Test-Path $env:ANDROID_HOME) {
 
 # PATH modifications
 $env:PATH += "$env:USERPROFILE\.local\bin;"
-$env:PATH += "$env:USERPROFILE\.local\opt\pgsql\bin;"
 
 function proxy {
     $env:HTTP_PROXY = "http://127.0.0.1:10808"
