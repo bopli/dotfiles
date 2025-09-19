@@ -23,7 +23,7 @@ $env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 $env:PGDATA = "$env:USERPROFILE\.local\opt\pgsql\data"
 $env:PATH += "$env:USERPROFILE\.local\opt\pgsql\bin;"
 
-{{#if (is_executable "vcpkg")}}
+{{#if vcpkg_root}}
 # Vcpkg and Cmake
 {{#if vcpkg_target}}
 # x64-windows \ x64-mingw-dynamic \ x64-mingw-static
@@ -31,8 +31,8 @@ $env:VCPKG_TARGET_TRIPLET = {{vcpkg_target}}
 $env:VCPKG_DEFAULT_TRIPLET = {{vcpkg_target}}
 $env:VCPKG_DEFAULT_HOST_TRIPLET = {{vcpkg_target}}
 {{/if}}
-$env:VCPKG_ROOT = "C:\vcpkg"
-$env:PATH += ";$env:VCPKG_ROOT"
+$env:VCPKG_ROOT = {{vcpkg_root}}
+$env:PATH += "$env:VCPKG_ROOT;"
 {{#if (is_executable "cmake")}}
 $env:CMAKE_TOOLCHAIN_FILE = "$env:VCPKG_ROOT\scripts\buildsystems\vcpkg.cmake"
 {{/if}}
