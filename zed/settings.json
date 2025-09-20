@@ -35,6 +35,7 @@
   },
   "agent": {
     "use_modifier_to_send": true,
+    "default_profile": "write",
     "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "google",
@@ -47,6 +48,15 @@
     "git_status": true
   },
   "extend_comment_on_newline": false,
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null,
+      "enterprise_uri": null
+    },
+    "enabled_in_text_threads": false
+  },
   "terminal": {
     "cursor_shape": "underline",
     "line_height": "standard",
@@ -54,6 +64,11 @@
       "breadcrumbs": false
     },
     "font_size": 12
+  },
+  "file_types": {
+    "Git Attributes": ["{git,.git,.git/info}/attributes"],
+    "Git Config": ["{git,.git/modules,.git/modules/*}/config"],
+    "Git Ignore": ["{git,.git}/ignore", ".git/info/exclude"]
   },
   "vim": {
     "cursor_shape": {
