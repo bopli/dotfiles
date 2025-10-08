@@ -7,10 +7,10 @@
   },
   "base_keymap": "VSCode",
   "buffer_font_family": "Cascadia Code",
-  "buffer_font_size": 13,
+  "buffer_font_size": 13.0,
   "buffer_line_height": "standard",
   "ui_font_family": ".SystemUIFont",
-  "ui_font_size": 15,
+  "ui_font_size": 15.0,
   "use_system_path_prompts": false,
   "use_system_prompts": false,
   // "auto_signature_help": true,
@@ -35,11 +35,11 @@
   },
   "agent": {
     "use_modifier_to_send": true,
-    "default_profile": "write",
+    "default_profile": "ask",
     "play_sound_when_agent_done": true,
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash-lite-preview"
+      "model": "gemini-2.5-flash"
     },
     "always_allow_tool_actions": true,
     "stream_edits": true
