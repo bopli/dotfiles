@@ -12,9 +12,3 @@ index = "https://rsproxy.cn/crates.io-index"
 
 [net]
 git-fetch-with-cli = true
-
-{{#if (is_executable "sccache")}}
-[build]
-rustc-wrapper = "~/.cargo/bin/sccache"
-
-{{/if}}
