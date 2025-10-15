@@ -6,6 +6,12 @@
 shopt -s completion_strip_exe
 {{/if}}
 
+export HISTFILESIZE=9000
+export HISTSIZE=500
+export HISTCONTROL=ignoredups:ignorespace
+export HISTIGNORE="ls:cd:pwd:exit:clear:history:df:du:git status:git diff:git log"
+export HISTTIMEFORMAT="%F %T "
+
 # Alias
 alias cp="cp -i"
 alias mv="mv -i"
@@ -29,17 +35,11 @@ alias la="ls -a --color=auto"
 alias ll="ls -AFhl --color=auto"
 {{/if}}
 
-{{#if dotter.packages.starship}}
-# Prompt with starship
-eval "$(starship init bash)"
-{{/if}}
-
 {{#if (is_executable "fzf")}}
-# Fuzzy Finder
 eval "$(fzf --bash)"
 {{/if}}
 
-{{#if (eq dotter.os "windows")}}
+{{#if (is_executable "cargo")}}
 # Completions for Cargo
 if command -v rustc >/dev/null 2>&1; then
   source "$(rustc --print sysroot)"/etc/bash_completion.d/cargo

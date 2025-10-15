@@ -1,6 +1,10 @@
 [bat.files]
 bat = "~/AppData/Roaming/bat"
 
+[git_bash.files]
+"git/bashrc" = "~/.bashrc"
+"git/bash_profile" = "~/.bash_profile"
+
 [helix.files]
 helix = "~/AppData/Roaming/helix"
 
