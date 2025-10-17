@@ -1,5 +1,6 @@
 // Zed settings
 {
+  "auto_update": false,
   "theme": {
     "mode": "system",
     "light": "One Light",
@@ -81,5 +82,5 @@
       "visual": "block"
     }
   },
-  "proxy": "socks5://127.0.0.1:10808"
+  "proxy": "http://127.0.0.1:10808"
 }
