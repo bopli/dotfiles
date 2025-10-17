@@ -11,7 +11,7 @@ $env:PAGER = "bat"
 $env:GO111MODULE = "on"
 $env:GOPROXY = "https://goproxy.cn"
 $env:GOPATH = "$env:USERPROFILE\.go"
-$env:PATH += "$env:GOPATH\bin;"
+$env:PATH += ";$env:GOPATH\bin"
 {{/if}}
 
 {{#if (is_executable "rustup")}}
@@ -21,7 +21,7 @@ $env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 {{/if}}
 
 $env:PGDATA = "$env:USERPROFILE\.local\opt\pgsql\data"
-$env:PATH += "$env:USERPROFILE\.local\opt\pgsql\bin;"
+$env:PATH += ";$env:USERPROFILE\.local\opt\pgsql\bin"
 
 {{#if vcpkg_root}}
 # Vcpkg and Cmake
@@ -32,7 +32,7 @@ $env:VCPKG_DEFAULT_TRIPLET = {{vcpkg_target}}
 $env:VCPKG_DEFAULT_HOST_TRIPLET = {{vcpkg_target}}
 {{/if}}
 $env:VCPKG_ROOT = {{vcpkg_root}}
-$env:PATH += "$env:VCPKG_ROOT;"
+$env:PATH += ";$env:VCPKG_ROOT"
 {{#if (is_executable "cmake")}}
 $env:CMAKE_TOOLCHAIN_FILE = "$env:VCPKG_ROOT\scripts\buildsystems\vcpkg.cmake"
 {{/if}}
@@ -48,7 +48,7 @@ if (Test-Path $env:ANDROID_HOME) {
 }
 
 # PATH modifications
-$env:PATH += "$env:USERPROFILE\.local\bin;"
+$env:PATH += ";$env:USERPROFILE\.local\bin"
 
 function proxy {
     $env:HTTP_PROXY = "http://127.0.0.1:10808"
