@@ -17,6 +17,7 @@
     {{#if dotter.packages.helix}}
     editor = hx
     {{/if}}
+    quotepath = false
 
 [help]
     autocorrect = 20
