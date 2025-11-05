@@ -3,4 +3,13 @@
 	"show_inlay_hints": true,
 	"inlay_hints_max_length": 20,
 	"inhibit_snippet_completions": true,
+	"clients": {
+        "slint-lsp": {
+            "enabled": true,
+            "command": [
+                "~/.cargo/bin/slint-lsp.exe"
+            ],
+            "selector": "source.slint"
+        },
+    },
 }
