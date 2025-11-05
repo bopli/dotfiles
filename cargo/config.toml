@@ -15,5 +15,5 @@ git-fetch-with-cli = true
 
 {{#if (is_executable "sccache")}}
 [build]
-rustc-wrapper = "~/.cargo/bin/sccache"
+rustc-wrapper = "sccache"
 {{/if}}
