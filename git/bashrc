@@ -1,10 +1,16 @@
-# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-{{#if (eq dotter.os "windows")}}
-# Shopt
 shopt -s completion_strip_exe
-{{/if}}
+
+if [ -f /etc/profile.d/git-prompt.sh ]; then
+    . /etc/profile.d/git-prompt.sh
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM="auto"
+GIT_PS1_SHOWCOLORHINTS=true
+GIT_PS1_SHOWSTASHSTATE=true
 
 export HISTFILESIZE=9000
 export HISTSIZE=500
@@ -20,9 +26,6 @@ alias df="df -Th"
 alias du="du -sh"
 alias less="less -r"
 alias grep="grep --color=auto"
-{{#if dotter.packages.bat}}
-alias cat="bat"
-{{/if}}
 {{#if (is_executable "eza")}}
 alias ls="eza --color=auto"
 alias l="eza -F --color=auto"
@@ -32,16 +35,7 @@ alias ll="eza -ahl --color=auto --time-style long-iso"
 alias ls="ls --color=auto"
 alias l="ls -F --color=auto"
 alias la="ls -a --color=auto"
-alias ll="ls -AFhl --color=auto"
+alias ll="ls -alhF --color=auto"
 {{/if}}
 
-{{#if (is_executable "fzf")}}
 eval "$(fzf --bash)"
-{{/if}}
-
-{{#if (is_executable "cargo")}}
-# Completions for Cargo
-if command -v rustc >/dev/null 2>&1; then
-  source "$(rustc --print sysroot)"/etc/bash_completion.d/cargo
-fi
-{{/if}}

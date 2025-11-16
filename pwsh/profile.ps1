@@ -1,42 +1,25 @@
-{{#if gemini_api_key}}
-$env:GEMINI_API_KEY = {{gemini_api_key}}
-{{/if}}
+$env:PATH += ";$env:USERPROFILE\.local\bin"
 
-{{#if dotter.packages.bat}}
 $env:PAGER = "bat"
-{{/if}}
 
-{{#if (is_executable "go")}}
 # Go proxy
 $env:GO111MODULE = "on"
 $env:GOPROXY = "https://goproxy.cn"
-$env:GOPATH = "$env:USERPROFILE\.go"
-$env:PATH += ";$env:GOPATH\bin"
-{{/if}}
 
-{{#if (is_executable "rustup")}}
 # Rustup proxy
 $env:RUSTUP_DIST_SERVER = "https://rsproxy.cn"
 $env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
-{{/if}}
 
+# PostgreSQL
 $env:PGDATA = "$env:USERPROFILE\.local\opt\pgsql\data"
 $env:PATH += ";$env:USERPROFILE\.local\opt\pgsql\bin"
 
-{{#if vcpkg_root}}
-# Vcpkg and Cmake
-{{#if vcpkg_target}}
-# x64-windows \ x64-mingw-dynamic \ x64-mingw-static
-$env:VCPKG_TARGET_TRIPLET = {{vcpkg_target}}
-$env:VCPKG_DEFAULT_TRIPLET = {{vcpkg_target}}
-$env:VCPKG_DEFAULT_HOST_TRIPLET = {{vcpkg_target}}
-{{/if}}
-$env:VCPKG_ROOT = {{vcpkg_root}}
+# Vcpkg
+$env:VCPKG_ROOT = "$env:USERPROFILE\.local\opt\vcpkg"
 $env:PATH += ";$env:VCPKG_ROOT"
-{{#if (is_executable "cmake")}}
+
+# Cmake
 $env:CMAKE_TOOLCHAIN_FILE = "$env:VCPKG_ROOT\scripts\buildsystems\vcpkg.cmake"
-{{/if}}
-{{/if}}
 
 # Android SDK and NDK
 $env:ANDROID_HOME = "$env:LOCALAPPDATA\Android\Sdk"
@@ -46,9 +29,6 @@ if (Test-Path $env:ANDROID_HOME) {
         $env:NDK_HOME = $LatestNDKVersion.FullName
     }
 }
-
-# PATH modifications
-$env:PATH += ";$env:USERPROFILE\.local\bin"
 
 function proxy {
     $env:HTTP_PROXY = "http://127.0.0.1:10808"
@@ -60,7 +40,6 @@ function unproxy {
     Remove-Item Env:HTTPS_PROXY -ErrorAction SilentlyContinue
 }
 
-{{#if (is_executable "eza")}}
 # eza
 function Invoke-Eza {
     param (
@@ -88,16 +67,13 @@ function Invoke-Eza_List {
     eza -l --git --icons=always @Args
 }
 Set-Alias ll Invoke-Eza_List
-{{/if}}
+
 
 # Exit
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 
-{{#if (is_executable "fzf")}}
 # PsFzf
 Set-PsFzfOption -PSReadlineChordProvider ctrl+t -PSReadlineChordReverseHistory ctrl+r
-{{/if}}
 
-{{#if (is_executable "starship")}}
+# Starship
 Invoke-Expression (&starship init powershell)
-{{/if}}

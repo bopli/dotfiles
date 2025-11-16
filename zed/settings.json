@@ -39,8 +39,8 @@
     "default_profile": "write",
     "play_sound_when_agent_done": true,
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet"
     },
     "always_allow_tool_actions": true,
     "stream_edits": true
