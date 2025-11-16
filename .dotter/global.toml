@@ -11,7 +11,7 @@ cargo = "~/.cargo"
 "git/gitignore_global" = "~/.gitignore_global"
 
 [npm.files]
-".npmrc" = "~/.npmrc"
+"npm/npmrc" = "~/.npmrc"
 
 [starship.files]
 starship = "~/.config"
