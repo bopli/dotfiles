@@ -11,28 +11,28 @@
     sw = switch
     swc = switch -c
     ri = rebase -i
-	st = status -sb
-	cmm = commit -m
+    st = status -sb
+    cmm = commit -m
     ll = log --oneline
     llg = log --oneline --grep
-	pushom = push origin main
-	pullom = pull origin main
+    pushom = push origin main
+    pullom = pull origin main
 [core]
-	editor = hx
-	autocrlf = input
+    editor = hx
+    autocrlf = input
     pager = difft
-	excludesfile = .gitignore_global
+    excludesfile = .gitignore_global
 [diff]
     external = difft
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [merge]
     conflictstyle = diff3
 [user]
-	email = bopli233@outlook.com
-	name = bopli
+    email = bopli233@outlook.com
+    name = bopli
