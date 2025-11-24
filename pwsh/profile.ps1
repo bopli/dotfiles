@@ -68,7 +68,6 @@ function Invoke-Eza_List {
 }
 Set-Alias ll Invoke-Eza_List
 
-
 # Exit
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 

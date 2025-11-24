@@ -1,8 +1,0 @@
-[bat.files]
-bat = "~/.config/bat"
-
-[helix.files]
-helix = "~/.config/helix"
-
-[wsl.files]
-wsl = { target = "/etc", type = "template", owner = "root" }

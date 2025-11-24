@@ -14,7 +14,6 @@
   "ui_font_size": 15.0,
   "use_system_path_prompts": false,
   "use_system_prompts": false,
-  // "auto_signature_help": true,
   "title_bar": {
     "show_branch_icon": true
   },
@@ -42,8 +41,7 @@
       "provider": "zed.dev",
       "model": "claude-3-7-sonnet"
     },
-    "always_allow_tool_actions": true,
-    "stream_edits": true
+    "always_allow_tool_actions": true
   },
   "tabs": {
     "git_status": true
@@ -63,6 +61,7 @@
     "enabled_in_text_threads": false
   },
   "terminal": {
+    "font_family": "CaskaydiaCove Nerd Font",
     "cursor_shape": "underline",
     "line_height": "standard",
     "toolbar": {
