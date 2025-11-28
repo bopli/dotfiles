@@ -38,8 +38,8 @@
     "default_profile": "write",
     "play_sound_when_agent_done": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet"
+      "provider": "google",
+      "model": "gemini-2.5-flash"
     },
     "always_allow_tool_actions": true
   },
@@ -73,6 +73,18 @@
     "Git Attributes": ["{git,.git,.git/info}/attributes"],
     "Git Config": ["{git,.git/modules,.git/modules/*}/config"],
     "Git Ignore": ["{git,.git}/ignore", ".git/info/exclude"]
+  },
+  "lsp": {
+    "slint": {
+      "binary": {
+        "path": "slint-lsp"
+      }
+    },
+    "toml": {
+      "binary": {
+        "path": "tombi"
+      }
+    }
   },
   "vim": {
     "cursor_shape": {
