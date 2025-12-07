@@ -15,3 +15,4 @@ git-fetch-with-cli = true
 
 [build]
 target-dir = "C:\\Users\\bopli\\.cargo\\target"
+# rustc-wrapper = "sccache"

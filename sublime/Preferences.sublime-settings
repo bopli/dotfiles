@@ -1,10 +1,9 @@
 {
 	"ignored_packages": [
-		"GitGutter",
 		"Vintage",
 	],
-	"index_files": true,
-	"font_face": "CaskaydiaCove Nerd Font",
+	"index_files": false,
+	"font_face": "Cascadia Code",
 	"font_size": 10,
 	"theme": "Adaptive.sublime-theme",
 	"color_scheme": "Mariana.sublime-color-scheme",

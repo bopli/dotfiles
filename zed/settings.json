@@ -75,6 +75,11 @@
     "Git Ignore": ["{git,.git}/ignore", ".git/info/exclude"]
   },
   "lsp": {
+    "rust": {
+      "binary": {
+        "path": "rust-analyzer"
+      }
+    },
     "slint": {
       "binary": {
         "path": "slint-lsp"
@@ -92,6 +97,6 @@
       "insert": "bar",
       "visual": "block"
     }
-  },
-  "proxy": "http://127.0.0.1:10808"
+  }
+  // "proxy": "http://127.0.0.1:10808"
 }
